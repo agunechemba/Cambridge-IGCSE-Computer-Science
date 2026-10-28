@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambridge IGCSE Computer Science — A Storybook for Curious Minds</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+</head>
+<body>
+
+<!-- ============================================================
+     COVER
+     ============================================================ -->
+<section id="cover" class="book-page cover-page">
+  <div class="cover-content">
+    <p class="cover-series">A Storybook for Curious Minds</p>
+    <h1 class="cover-title">Cambridge IGCSE Computer Science</h1>
+    <p class="cover-subtitle">From binary to databases — the whole journey, one page at a time.</p>
+    <p class="cover-author">By David Watson and Helen Williams</p>
+    <p class="cover-note">Two parts. Thirteen chapters.<br>One gentle walk through the machine.</p>
+    <p class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin the Journey →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section id="toc" class="book-page toc-page">
+  <div class="chapter-header">
+    <h2>Table of Contents</h2>
+    <p class="chapter-tagline">Where would you like to go?</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part One: Theory of Computer Science</h3>
+    <ol>
+      <li><a href="#ch-binary-systems-and-hexadecimal">Binary Systems and Hexadecimal</a></li>
+      <li><a href="#ch-communication-and-internet-technologies">Communication and Internet Technologies</a></li>
+      <li><a href="#ch-logic-gates-and-logic-circuits">Logic Gates and Logic Circuits</a></li>
+      <li><a href="#ch-operating-systems-and-computer-architecture">Operating Systems and Computer Architecture</a></li>
+      <li><a href="#ch-input-and-output-devices">Input and Output Devices</a></li>
+      <li><a href="#ch-memory-and-data-storage">Memory and Data Storage</a></li>
+      <li><a href="#ch-high-and-low-level-languages">High- and Low-Level Languages</a></li>
+      <li><a href="#ch-security-and-ethics">Security and Ethics</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Two: Practical Problem-Solving and Programming</h3>
+    <ol start="9">
+      <li><a href="#ch-problem-solving-and-design">Problem-Solving and Design</a></li>
+      <li><a href="#ch-pseudocode-and-flowcharts">Pseudocode and Flowcharts</a></li>
+      <li><a href="#ch-programming-concepts">Programming Concepts</a></li>
+      <li><a href="#ch-data-structures-arrays">Data Structures: Arrays</a></li>
+      <li><a href="#ch-databases">Databases</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Appendix</h3>
+    <ol>
+      <li><a href="#glossary">Glossary of Useful Terms</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Cover</button>
+    <button class="nav-button" data-nav="next">Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section id="intro" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Introduction</p>
+    <h2>Welcome to Computer Science</h2>
+    <p class="chapter-tagline">What this book is, who it's for, and how to read it.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Computer science is the study of how computers work — not just how to use them, but what makes them tick. This book is written for students preparing for the Cambridge IGCSE and GCE O Level Computer Science examinations, and for anyone curious about the machine on their desk.</p>
+    <p>The book is split into two parts. <strong>Part One</strong> covers the theory: binary and hexadecimal, communication and the internet, logic gates, operating systems, input and output, memory, programming languages, and security. <strong>Part Two</strong> turns to practice: problem-solving, pseudocode, flowcharts, programming concepts, arrays, and databases.</p>
+    <p>Every chapter follows the same shape. A short story introduces the ideas. A box of <em>Key Ideas</em> draws out the takeaways. And a few <em>Try It Yourself</em> questions invite you to test what you have learned. You will also find code examples and pseudocode to read and copy.</p>
+    <p>You do not need any prior knowledge of programming to start. You only need patience, curiosity, and the willingness to make mistakes — which is how every programmer learns.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Computer science is about understanding how computers work, not just using them.</li>
+      <li>The book has two parts: theory (how computers work) and practice (how to program them).</li>
+      <li>Each chapter has a story, key ideas, code examples, and exercises.</li>
+      <li>No prior programming experience is needed.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Name three devices in your home that contain a computer.</li>
+      <li>What is the difference between using a computer and understanding one?</li>
+      <li>Which chapter are you most curious to read first?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Table of Contents</button>
+    <button class="nav-button" data-nav="next">Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART ONE DIVIDER
+     ============================================================ -->
+<section id="part-one" class="book-page cover-page part-page part-one">
+  <div class="cover-content">
+    <p class="part-number">Part One</p>
+    <h1>Theory of Computer Science</h1>
+    <p class="part-desc">Binary, networks, logic, operating systems, devices, memory, languages, and security — the foundations of the machine.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 1 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1
+     ============================================================ -->
+<section id="ch-binary-systems-and-hexadecimal" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 1</p>
+    <h2>Binary Systems and Hexadecimal</h2>
+    <p class="chapter-tagline">Every computer speaks in ones and zeros — and hex makes them readable.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Inside every computer are millions of tiny switches. A switch can be ON or OFF. We write ON as <code>1</code> and OFF as <code>0</code>. That is the whole of the <strong>binary system</strong>: base 2, counting with only two digits.</p>
+    <p>We normally count in <strong>denary</strong> (base 10), with columns for units, tens, hundreds, and so on. Binary works the same way, but the columns double each time: 1, 2, 4, 8, 16, 32, 64, 128. So the binary number <code>11101110</code> means 128 + 64 + 32 + 8 + 4 + 2 = <strong>238</strong> in denary. To go the other way, you can either try values by eye or divide repeatedly by 2 and read the remainders from bottom to top.</p>
+    <p>Computers measure memory in powers of two. A <strong>bit</strong> is one binary digit. A <strong>byte</strong> is eight bits. A kilobyte (KB) is 2<sup>10</sup> = 1,024 bytes; a megabyte (MB) is 1,024 KB; and so on up through gigabytes, terabytes, and petabytes.</p>
+    <p>Binary numbers get long quickly, so programmers often use <strong>hexadecimal</strong> (base 16). The digits are <code>0</code>–<code>9</code> and <code>A</code>–<code>F</code>, where A=10, B=11, and so on up to F=15. Because 16 = 2<sup>4</sup>, four binary digits become one hex digit. Hexadecimal is everywhere: memory dumps, MAC addresses, ASCII-encoded web addresses, and the colour codes of web pages.</p>
+    <pre class="code-example"><code>&lt;h1 style="color: #FF0000;"&gt;Red text&lt;/h1&gt;
+&lt;h2 style="color: #00FF00;"&gt;Green text&lt;/h2&gt;
+&lt;h3 style="color: #0000FF;"&gt;Blue text&lt;/h3&gt;</code></pre>
+    <p>Each colour is three hexadecimal pairs, one for red, one for green, one for blue. <code>#FF0000</code> is pure red; <code>#00FF00</code> is pure green; <code>#0000FF</code> is pure blue. Mix them, and you can name almost any colour the eye can see.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A <strong>bit</strong> is one binary digit; a <strong>byte</strong> is eight bits.</li>
+      <li>Binary uses two digits (0, 1); denary uses ten; hexadecimal uses sixteen (0–9 and A–F).</li>
+      <li>Converting between binary and hexadecimal is easy: group binary digits in fours.</li>
+      <li>Hexadecimal is used for HTML colours, MAC addresses, memory dumps, and assembly code.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Convert the binary number <code>1101 0110</code> to denary.</li>
+      <li>Convert the denary number 107 to binary using repeated division by 2.</li>
+      <li>Convert the hexadecimal number <code>2F</code> to denary and to binary.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part One</button>
+    <button class="nav-button" data-nav="next">Communication and Internet Technologies →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2
+     ============================================================ -->
+<section id="ch-communication-and-internet-technologies" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 2</p>
+    <h2>Communication and Internet Technologies</h2>
+    <p class="chapter-tagline">How computers talk to each other — and how we catch them when they mishear.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Data travels between devices in three main ways. It can go in one direction only (<strong>simplex</strong>), in both directions but not at the same time (<strong>half-duplex</strong>), or in both directions at once (<strong>full-duplex</strong>). It can be sent one bit at a time down a single wire (<strong>serial</strong>) or several bits at once down parallel wires (<strong>parallel</strong>). And it can be timed either by control bits around each group of data (<strong>asynchronous</strong>) or by a shared clock (<strong>synchronous</strong>).</p>
+    <p>The <strong>Universal Serial Bus</strong> (USB) is the modern standard for connecting devices. It is asynchronous, serial, and auto-detecting: plug a device in, and the computer finds and loads the right driver. Its connectors only fit one way, which prevents wrong connections, but its cables are limited to about five metres.</p>
+    <p>Whenever data travels, there is a risk of error. A <strong>parity bit</strong> is added to each byte so the receiver can check whether the number of 1s is even or odd. A <strong>checksum</strong> adds up the bytes and sends the total along with the block. <strong>ARQ</strong> (Automatic Repeat Request) waits for an acknowledgement and re-sends if none arrives before a timeout. An <strong>echo check</strong> bounces the data back to the sender to compare.</p>
+    <p>The internet ties all of this together. Your <strong>ISP</strong> gives you an <strong>IP address</strong> for the session — a location, like a house. Your <strong>MAC address</strong> identifies the device itself, like the person living there. Web pages are written in <strong>HTML</strong>, which describes structure, and styled with <strong>CSS</strong>, which describes presentation. Browsers fetch them over <strong>HTTP</strong> — or <strong>HTTPS</strong> when the connection must be secure.</p>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>The HTML gives the page its bones. The linked CSS file gives it its clothes. Keep the two separate, and you can restyle a whole site by editing one file.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Transmission has direction (simplex, half-duplex, full-duplex), method (serial, parallel), and timing (asynchronous, synchronous).</li>
+      <li>Error checking uses parity, checksums, ARQ, and echo checks.</li>
+      <li>An IP address locates a device; a MAC address identifies it.</li>
+      <li>HTML structures a web page; CSS presents it; HTTP (or HTTPS) transports it.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Describe the difference between simplex and half-duplex transmission.</li>
+      <li>Explain how a parity bit can detect a single-bit error.</li>
+      <li>Why is it useful to keep HTML and CSS in separate files?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Binary Systems and Hexadecimal</button>
+    <button class="nav-button" data-nav="next">Logic Gates and Logic Circuits →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3
+     ============================================================ -->
+<section id="ch-logic-gates-and-logic-circuits" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 3</p>
+    <h2>Logic Gates and Logic Circuits</h2>
+    <p class="chapter-tagline">Six tiny gates — and the truth tables that describe them.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Computers are built from <strong>logic gates</strong>. Each gate takes one or two binary inputs and produces a single binary output. There are six to learn: <strong>NOT</strong>, <strong>AND</strong>, <strong>OR</strong>, <strong>NAND</strong>, <strong>NOR</strong>, and <strong>XOR</strong>.</p>
+    <p>Each gate can be described by a <strong>truth table</strong> — a table listing every possible input and the resulting output. A one-input gate has two rows; a two-input gate has four; a three-input circuit has eight. The pattern doubles each time you add an input.</p>
+    <p>Gates can be wired together into <strong>logic circuits</strong>. Designers test a circuit by tracing every combination of inputs. A circuit with three inputs has eight rows to check, and each intermediate gate gets its own column. If two circuits give identical outputs for every combination, they are equivalent — and the simpler one is almost always preferred.</p>
+    <p>The <strong>NAND</strong> gate is special: you can build any other gate from NAND gates alone. That is why NAND is often called the universal building block. Simplifying a circuit — replacing many gates with a few — reduces cost, improves reliability, and makes faults easier to trace.</p>
+    <pre class="code-example"><code>NOT gate truth table
+A | X
+0 | 1
+1 | 0
+
+AND gate truth table
+A B | X
+0 0 | 0
+0 1 | 0
+1 0 | 0
+1 1 | 1
+
+OR gate truth table
+A B | X
+0 0 | 0
+0 1 | 1
+1 0 | 1
+1 1 | 1</code></pre>
+    <p>Real circuits combine these gates by the thousand. A modern processor contains millions of them — yet every one obeys the same simple rules.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Six logic gates: NOT, AND, OR, NAND, NOR, XOR.</li>
+      <li>A truth table lists every possible input and its output.</li>
+      <li>NAND alone can build every other gate — it is universal.</li>
+      <li>Simplifying logic circuits saves money and improves reliability.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write the truth table for a NOR gate.</li>
+      <li>How many rows would a truth table need for a circuit with four inputs?</li>
+      <li>Why is the NAND gate called a universal gate?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Communication and Internet Technologies</button>
+    <button class="nav-button" data-nav="next">Operating Systems and Computer Architecture →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4
+     ============================================================ -->
+<section id="ch-operating-systems-and-computer-architecture" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 4</p>
+    <h2>Operating Systems and Computer Architecture</h2>
+    <p class="chapter-tagline">The invisible manager and the machine that runs your programs.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An <strong>operating system</strong> (OS) runs quietly in the background of every computer. It handles memory, files, security, multitasking, input and output, and error handling. Without it, most of us would find a computer almost impossible to use. Common examples include Windows, Linux, Android, and UNIX.</p>
+    <p>The OS also manages <strong>interrupts</strong> and <strong>buffers</strong>. An interrupt is a signal that tells the processor to pause what it is doing and deal with something more urgent — a key press, a printer error, a disk that is ready for more data. A buffer is a temporary memory area that holds data while a slower device catches up. Together, interrupts and buffers let a computer download a file while playing music, without missing a beat.</p>
+    <p>Almost all modern computers follow the <strong>von Neumann architecture</strong>. Programs and data live together in memory, and data moves between memory and processor along <strong>buses</strong>: the <strong>address bus</strong> carries locations, the <strong>data bus</strong> carries the values, and the <strong>control bus</strong> carries signals that keep everything in step.</p>
+    <p>Inside the processor, five <strong>registers</strong> do the work: the <strong>MAR</strong> (memory address register), the <strong>MDR</strong> (memory data register), the <strong>ALU</strong> (arithmetic and logic unit), the <strong>PC</strong> (program counter), and the <strong>CIR</strong> (current instruction register). The <strong>fetch–execute cycle</strong> uses them all.</p>
+    <pre class="code-example"><code>1. Copy the address in the PC into the MAR
+2. Fetch the instruction at that address into the MDR
+3. Copy the MDR value into the CIR
+4. Increment the PC by 1
+5. Decode the instruction in the CIR
+6. Execute the instruction using the ALU and control bus
+7. Repeat from step 1</code></pre>
+    <p>That loop runs billions of times a second. Everything else in this book — every program, every image, every message — is built on top of it.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The operating system manages memory, files, devices, and security.</li>
+      <li>Interrupts pause the processor; buffers hold data while slower devices catch up.</li>
+      <li>von Neumann architecture: programs and data share one memory.</li>
+      <li>The fetch–execute cycle moves instructions from memory into the processor and runs them.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Name four functions of an operating system.</li>
+      <li>What is the difference between an interrupt and a buffer?</li>
+      <li>List the steps of the fetch–execute cycle in order.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Logic Gates and Logic Circuits</button>
+    <button class="nav-button" data-nav="next">Input and Output Devices →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5
+     ============================================================ -->
+<section id="ch-input-and-output-devices" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 5</p>
+    <h2>Input and Output Devices</h2>
+    <p class="chapter-tagline">The senses and voice of the machine.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Input devices let data into a computer. There are many kinds. <strong>Scanners</strong> turn paper into pixels — 2D scanners use a bright light and a charged couple device (CCD) to digitise pages; 3D scanners add depth; CT scanners build up 3D images slice by slice. <strong>Barcode readers</strong> shine a red light on a pattern of lines and decode the reflection. <strong>QR codes</strong> hold thousands of characters in a small matrix. <strong>Digital cameras</strong> focus light onto light-sensitive cells. <strong>Keyboards</strong>, <strong>mice</strong>, <strong>trackerballs</strong>, <strong>microphones</strong>, and <strong>touchscreens</strong> all convert human actions into digital signals.</p>
+    <p><strong>Sensors</strong> measure physical properties — temperature, moisture, light, pressure, sound, gas, pH, magnetic fields — and send the readings through an <strong>analogue-to-digital converter</strong> (ADC) to the computer. In <strong>monitoring</strong> applications, the computer watches for values outside a safe range. In <strong>control</strong> applications, the computer acts — turning on a fan, opening a valve, switching on streetlights.</p>
+    <p>Output devices carry data back out. <strong>Inkjet printers</strong> spray droplets of ink and are ideal for one-off photos. <strong>Laser printers</strong> use toner and static electricity to print a whole page at once — faster and cheaper for bulk. <strong>3D printers</strong> build objects layer by layer from powder or resin. <strong>Cutters</strong>, <strong>actuators</strong>, <strong>loudspeakers</strong>, <strong>monitors</strong>, and <strong>projectors</strong> round out the family.</p>
+    <pre class="code-example"><code>REPEAT
+  Read sensor value
+  Send value through ADC
+  IF value &lt; threshold THEN
+    Switch device ON
+  ELSE
+    Switch device OFF
+  END IF
+  Wait 30 seconds
+UNTIL system is switched off</code></pre>
+    <p>That little loop is the heart of a thousand everyday machines — from streetlights that come on at dusk to greenhouses that keep themselves warm.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Input devices convert real-world information into digital data.</li>
+      <li>Sensors read physical properties; ADCs convert them to numbers.</li>
+      <li>Monitoring watches values; control acts on them.</li>
+      <li>Output devices range from printers and screens to actuators and speakers.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Explain how a barcode reader works.</li>
+      <li>Give one example of a monitoring application and one of a control application.</li>
+      <li>When would you choose a laser printer over an inkjet?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Operating Systems and Computer Architecture</button>
+    <button class="nav-button" data-nav="next">Memory and Data Storage →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6
+     ============================================================ -->
+<section id="ch-memory-and-data-storage" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 6</p>
+    <h2>Memory and Data Storage</h2>
+    <p class="chapter-tagline">Where computers keep their memories — and how they shrink files.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Files come in many formats. <strong>MIDI</strong> files store commands, not sound — a list of “play this note, at this volume”. A 10 MB MP3 might become a 10 KB MIDI file. <strong>MP3</strong> compresses audio by removing sounds the ear will not miss — lossy, but usually good enough. <strong>MP4</strong> does the same for video. <strong>JPEG</strong> compresses images by discarding subtle colour differences; the human eye is surprisingly forgiving.</p>
+    <p>There are two broad ways to compress a file. <strong>Lossless</strong> compression keeps every bit, so the original can be rebuilt exactly. <strong>Lossy</strong> compression throws some data away, trading quality for size. Use lossless for spreadsheets; lossy is fine for music and photos.</p>
+    <p>Memory comes in three layers. <strong>Primary memory</strong> is close to the processor and very fast. <strong>RAM</strong> is volatile — its contents vanish when the power goes off. <strong>DRAM</strong> needs constant refreshing; <strong>SRAM</strong> does not, and is used for cache. <strong>ROM</strong> is non-volatile and holds the start-up instructions. <strong>Secondary storage</strong> is slower but keeps its contents: <strong>hard disk drives</strong> (HDD) store data magnetically on spinning platters; <strong>solid-state drives</strong> (SSD) use NAND chips and have no moving parts, which makes them faster and more durable but still limited in write endurance. <strong>Off-line storage</strong> — CDs, DVDs, Blu-ray, USB flash drives, removable hard disks — is used for backups and for moving files between machines.</p>
+    <pre class="code-example"><code>Text file:    1 byte per character
+Image file:   3 bytes per pixel (red, green, blue)
+Sound file:   sample rate × bit depth × channels
+
+Example — a 3-megapixel image:
+  3,000,000 pixels × 3 bytes = 9,000,000 bytes ≈ 9 MB
+  After JPEG compression (÷ 8): ≈ 1.1 MB</code></pre>
+    <p>Estimating file sizes is a useful habit. Count the bytes, then think about compression — and remember that the number on the box is rarely the number you get.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>MIDI stores commands; MP3 and MP4 use lossy compression; JPEG is lossy for images.</li>
+      <li>Lossless compression rebuilds the original exactly; lossy does not.</li>
+      <li>RAM is volatile and fast; ROM is non-volatile; secondary storage keeps data when the power goes off.</li>
+      <li>HDD stores data magnetically; SSD stores it in NAND chips; optical media stores it under a laser.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Explain the difference between lossless and lossy compression.</li>
+      <li>Why does DRAM need refreshing but SRAM does not?</li>
+      <li>Estimate the size of an uncompressed 4-megapixel image.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Input and Output Devices</button>
+    <button class="nav-button" data-nav="next">High- and Low-Level Languages →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7
+     ============================================================ -->
+<section id="ch-high-and-low-level-languages" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 7</p>
+    <h2>High- and Low-Level Languages</h2>
+    <p class="chapter-tagline">From binary babble to human-readable code.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>program</strong> is a list of instructions that tells a computer what to do. Computers understand only <strong>machine code</strong> — the binary instructions of their own processor. Everything else must be translated.</p>
+    <p><strong>High-level languages</strong> (HLLs) look like human language. <code>Sum := FirstNumber + SecondNumber</code> is a single statement in a typical HLL. HLLs are easier to read, write, debug, and maintain, and they are portable across machines. Examples include Python, Java, C++, Visual Basic, and Pascal.</p>
+    <p><strong>Low-level languages</strong> live closer to the hardware. <strong>Assembly language</strong> uses short mnemonics like <code>LDA</code>, <code>ADD</code>, and <code>STO</code>; <strong>machine code</strong> is the underlying binary. Low-level languages let programmers use special hardware, write very fast code, or squeeze into tiny amounts of memory — but they are hard to read and machine-specific.</p>
+    <p>Translators turn source code into machine code. A <strong>compiler</strong> translates the whole program at once and produces an executable file. An <strong>interpreter</strong> runs the program statement by statement, without producing a separate file. An <strong>assembler</strong> translates assembly language into machine code.</p>
+    <pre class="code-example"><code>High-level language:
+  Sum := FirstNumber + SecondNumber
+
+Assembly language:
+  LDA First
+  ADD Second
+  STO Sum
+
+Machine code (hex):
+  1 2
+  4 13
+  0 1A</code></pre>
+    <p>Errors come in two kinds. A <strong>syntax error</strong> breaks the rules of the language — the program cannot be translated. A <strong>logic error</strong> lets the program run, but it does the wrong thing. Syntax errors are easy to spot; logic errors are why testers exist.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>High-level languages are easier to read, write, and maintain; low-level languages are closer to the hardware.</li>
+      <li>Compilers, interpreters, and assemblers translate source code into machine code.</li>
+      <li>Syntax errors stop translation; logic errors let a program run but produce wrong results.</li>
+      <li>IDEs bundle an editor, a translator, and debugging tools.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Give two advantages of a high-level language over an assembly language.</li>
+      <li>Explain the difference between a compiler and an interpreter.</li>
+      <li>What kind of error stops a program from being translated at all?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Memory and Data Storage</button>
+    <button class="nav-button" data-nav="next">Security and Ethics →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8
+     ============================================================ -->
+<section id="ch-security-and-ethics" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Theory of Computer Science · Chapter 8</p>
+    <h2>Security and Ethics</h2>
+    <p class="chapter-tagline">Keeping data safe — and using computers fairly.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Data is under constant threat. <strong>Hacking</strong> is breaking into a system to steal or damage data. <strong>Cracking</strong> is editing source code to make it do something it was never meant to do. <strong>Viruses</strong> copy themselves and corrupt files. <strong>Phishing</strong> and <strong>pharming</strong> redirect users to fake websites that look real. <strong>Wardriving</strong> uses a laptop to find unsecured wireless networks. <strong>Spyware</strong> and <strong>key-logging software</strong> record every keystroke and send it home.</p>
+    <p>Several tools help defend against these threats. A <strong>firewall</strong> sits between a computer and the internet, filtering traffic by rules and logging what passes. A <strong>proxy server</strong> sits in front of a web server, caches pages, hides the user's IP, and can block sites. <strong>SSL</strong> and <strong>TLS</strong> encrypt data between a browser and a web server — the padlock and the <code>https</code> in the address bar tell you they are in use.</p>
+    <p><strong>Encryption</strong> scrambles a message so that only the intended recipient can read it. <strong>Symmetric encryption</strong> uses one shared key. <strong>Asymmetric (public-key) encryption</strong> uses a public key to encrypt and a private key to decrypt. <strong>Hashing</strong> turns a message into a fixed-length string that acts as a fingerprint. <strong>Authentication</strong> checks that data really came from the source it claims to.</p>
+    <pre class="code-example"><code>Password (plain):     1234 5678 9012 3456
+MD4 hash (128-bit): 543FC7DDEA0CF5EAF84279CBADCA180D
+
+Change one character:
+Password (plain):     1234 5678 9012 3457
+MD4 hash (128-bit): 6B2A0E9F3C1D7E8A5F4C2B1D0E9A8F7C</code></pre>
+    <p><strong>Computer ethics</strong> asks broader questions: who owns an idea, what counts as privacy, and how computers change the way we live and work. <strong>Free software</strong> guarantees the freedom to study and modify source code. <strong>Freeware</strong> is free of charge but still copyrighted. <strong>Shareware</strong> is offered for a trial period, with payment expected if you keep it.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Common threats include hacking, viruses, phishing, pharming, wardriving, and spyware.</li>
+      <li>Firewalls and proxy servers filter traffic; SSL and TLS encrypt it.</li>
+      <li>Encryption protects confidentiality; hashing protects integrity; authentication protects identity.</li>
+      <li>Computer ethics covers intellectual property, privacy, and the effects of computers on society.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Explain the difference between phishing and pharming.</li>
+      <li>What does a firewall actually do?</li>
+      <li>Distinguish free software, freeware, and shareware.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← High- and Low-Level Languages</button>
+    <button class="nav-button" data-nav="next">Part Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART TWO DIVIDER
+     ============================================================ -->
+<section id="part-two" class="book-page cover-page part-page part-two">
+  <div class="cover-content">
+    <p class="part-number">Part Two</p>
+    <h1>Practical Problem-Solving and Programming</h1>
+    <p class="part-desc">Algorithms, pseudocode, flowcharts, programming concepts, arrays, and databases — turning ideas into working code.</p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="next">Begin Chapter 9 →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9
+     ============================================================ -->
+<section id="ch-problem-solving-and-design" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Practical Problem-Solving and Programming · Chapter 9</p>
+    <h2>Problem-Solving and Design</h2>
+    <p class="chapter-tagline">Big problems break into little problems.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every computer system is built from smaller systems. <strong>Top-down design</strong> breaks a big problem into sub-systems, then breaks each sub-system down again, until every piece does one simple job. The result is often drawn as a <strong>structure diagram</strong> — a family tree of tasks.</p>
+    <p>Once the pieces are clear, you can describe each one with a <strong>flowchart</strong> or with <strong>pseudocode</strong>. A <strong>library routine</strong> is a ready-made piece of code that solves a common problem (like sorting or finding the time) so you do not have to write it yourself. A <strong>sub-routine</strong> is a smaller piece of your own program that does one job and can be called whenever it is needed.</p>
+    <p>An <strong>algorithm</strong> is the step-by-step recipe that gets from problem to solution. To test one, you use a set of test data: <strong>normal</strong> data should be accepted, <strong>erroneous</strong> data should be rejected, <strong>extreme</strong> data marks the edges, and <strong>boundary</strong> data probes the edges from both sides. A <strong>trace table</strong> records each change to every variable so you can see exactly what happens.</p>
+    <p><strong>Validation</strong> checks that data is reasonable before it is accepted: a <strong>range check</strong> limits values, a <strong>length check</strong> limits characters, a <strong>type check</strong> requires the right kind of data, a <strong>character check</strong> forbids strange symbols, a <strong>format check</strong> insists on a pattern, and a <strong>presence check</strong> insists that something — anything — was entered. A <strong>check digit</strong> catches mistyped numbers. <strong>Verification</strong> checks that data was copied correctly: double entry, a visual check, a parity check, or a checksum.</p>
+    <pre class="code-example"><code>OUTPUT "Enter a percentage mark from 0 to 100: "
+REPEAT
+  INPUT Mark
+  IF Mark &lt; 0 OR Mark &gt; 100 THEN
+    OUTPUT "Invalid — please try again."
+  END IF
+UNTIL Mark &gt;= 0 AND Mark &lt;= 100
+OUTPUT "Accepted: ", Mark</code></pre>
+    <p>A solution that works for every valid input, skips no steps it needs, and repeats nothing it does not need — that is an <em>effective</em> solution. There is always more than one way to write one.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Top-down design breaks a problem into sub-systems; structure diagrams show the break-down.</li>
+      <li>Algorithms can be shown as flowcharts or pseudocode.</li>
+      <li>Test data comes in four flavours: normal, erroneous, extreme, and boundary.</li>
+      <li>Validation checks reasonableness; verification checks accuracy.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>What is the difference between validation and verification?</li>
+      <li>Give an example of boundary data for a mark between 0 and 100.</li>
+      <li>Draw a simple structure diagram for a task you do every morning.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Two</button>
+    <button class="nav-button" data-nav="next">Pseudocode and Flowcharts →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10
+     ============================================================ -->
+<section id="ch-pseudocode-and-flowcharts" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Practical Problem-Solving and Programming · Chapter 10</p>
+    <h2>Pseudocode and Flowcharts</h2>
+    <p class="chapter-tagline">Drawing and writing the shape of a solution.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p><strong>Pseudocode</strong> is a simple, English-like way to describe an algorithm. It is not bound by the syntax of any real language, but it follows conventions. Keywords are written in capitals (<code>INPUT</code>, <code>OUTPUT</code>, <code>IF</code>); variable names start with a capital letter; and indentation shows which statements belong together.</p>
+    <p>Assignment uses an arrow: <code>Cost ← 10</code>. Conditional statements come in two flavours. The <code>IF … THEN … ELSE … ENDIF</code> statement chooses between two paths. The <code>CASE … OF … OTHERWISE … ENDCASE</code> statement chooses between many.</p>
+    <p>Loops come in three shapes. <code>FOR … TO … NEXT</code> repeats a fixed number of times. <code>REPEAT … UNTIL</code> repeats at least once, checking the condition at the end. <code>WHILE … DO … ENDWHILE</code> may skip the body entirely, checking the condition at the start. The <code>FOR</code> loop is the most efficient when the number of repeats is known.</p>
+    <pre class="code-example"><code>INPUT Age
+IF Age &lt; 18
+THEN PRINT "Child"
+ELSE PRINT "Adult"
+ENDIF
+
+CASE Grade OF
+  "A" : PRINT "Excellent"
+  "B" : PRINT "Good"
+  "C" : PRINT "Average"
+  OTHERWISE PRINT "Improvement is needed"
+ENDCASE
+
+FOR Counter ← 1 TO 10
+  PRINT "*"
+NEXT
+
+Counter ← 0
+REPEAT
+  PRINT "*"
+  Counter ← Counter + 1
+UNTIL Counter &gt; 10
+
+Counter ← 0
+WHILE Counter &lt; 10 DO
+  PRINT "*"
+  Counter ← Counter + 1
+ENDWHILE</code></pre>
+    <p>Two standard actions appear in almost every algorithm. <strong>Totalling</strong> adds a value to a running total: <code>Total ← Total + Value</code>. <strong>Counting</strong> adds one to a counter: <code>Count ← Count + 1</code>. Learn to spot them, and you can read any algorithm.</p>
+    <p>Flowcharts use standard symbols. A rounded box begins or ends. A rectangle processes. A parallelogram inputs or outputs. A diamond decides. Arrows show the flow. Whether you draw a flowchart or write pseudocode, the goal is the same: make the algorithm clear enough that someone else can follow it.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Pseudocode uses capitalised keywords, clear variable names, and indentation.</li>
+      <li>Assignment uses <code>←</code>; comparisons use <code>&lt;</code>, <code>&gt;</code>, <code>=</code>, and so on.</li>
+      <li>Three loops: <code>FOR</code> for fixed repeats, <code>REPEAT</code> for at least once, <code>WHILE</code> for may-never-happen.</li>
+      <li>Standard flowchart symbols: terminator, process, input/output, decision, flow lines.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write pseudocode to input ten positive numbers and print their total.</li>
+      <li>Which loop would you choose if you needed to ask for a password until it matches? Why?</li>
+      <li>Draw the standard symbol for a decision and explain what goes inside it.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Problem-Solving and Design</button>
+    <button class="nav-button" data-nav="next">Programming Concepts →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11
+     ============================================================ -->
+<section id="ch-programming-concepts" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Practical Problem-Solving and Programming · Chapter 11</p>
+    <h2>Programming Concepts</h2>
+    <p class="chapter-tagline">Turning algorithms into running programs.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>variable</strong> is a named box that holds a value which may change while the program runs. A <strong>constant</strong> is a named box that never changes. Both should have meaningful names: <code>TotalPrice</code> beats <code>x</code>. Many languages also let you declare the <strong>data type</strong> of each one.</p>
+    <p>The five basic data types are <strong>integer</strong> (whole numbers), <strong>real</strong> (numbers with a fractional part), <strong>char</strong> (a single character), <strong>string</strong> (several characters), and <strong>Boolean</strong> (true or false). The type decides what you can do with a value — you can add integers, but not strings, unless you mean concatenation.</p>
+    <p>Programs follow one instruction after another: <strong>sequence</strong>. When the next step depends on a condition, we use <strong>selection</strong> (<code>if</code> and <code>case</code>). When something must be repeated, we use <strong>repetition</strong> (fixed, at-least-once, or may-never-happen loops). Two standard patterns recur: <strong>totalling</strong> and <strong>counting</strong>.</p>
+    <pre class="code-example"><code># Python — totalling a list of marks
+Total = 0
+Count = 0
+for Mark in [72, 85, 63, 90, 78]:
+    Total = Total + Mark
+    Count = Count + 1
+
+Average = Total / Count
+print("Average mark:", Average)</code></pre>
+    <p>Most languages also provide <strong>predefined procedures and functions</strong> — built-in tools for maths, text, and files. Learning to use them well is as important as learning to write your own. And <strong>IDEs</strong> bundle an editor, a translator, and a debugger, so you can write, run, and fix your code in one place.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Variables change; constants do not; both should have meaningful names.</li>
+      <li>Five basic data types: integer, real, char, string, Boolean.</li>
+      <li>Programs use sequence, selection, and repetition.</li>
+      <li>Totalling and counting are the two most common loop patterns.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Explain the difference between a variable and a constant.</li>
+      <li>Which data type would you use for a phone number? Why?</li>
+      <li>Write a short loop that counts how many even numbers appear in a list.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Pseudocode and Flowcharts</button>
+    <button class="nav-button" data-nav="next">Data Structures: Arrays →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12
+     ============================================================ -->
+<section id="ch-data-structures-arrays" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Practical Problem-Solving and Programming · Chapter 12</p>
+    <h2>Data Structures: Arrays</h2>
+    <p class="chapter-tagline">One name, many values.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Suppose you need to store the names of thirty students. Thirty separate variables would be a nightmare. Instead, you use an <strong>array</strong> — a row of boxes with the same name, each labelled by an <strong>index</strong> number.</p>
+    <p>To declare an array, you need three things: a meaningful name, the number of items, and the data type. In many languages the first element is numbered <code>0</code>, so an array of thirty students actually has thirty-one slots, and the first is unused. That is fine — you simply ignore it.</p>
+    <p>You can use a variable as the index. Then the same code can refer to any item in the list, one after another. This is what makes arrays so useful with loops: a <code>FOR … TO … NEXT</code> loop can read values into an array or print them out.</p>
+    <pre class="code-example"><code>DIM names$(2)
+
+names$(0) = "Ada"
+names$(1) = "Grace"
+names$(2) = "Alan"
+
+FOR I = 0 TO 2
+  PRINT names$(I)
+NEXT I
+
+' Output:
+' Ada
+' Grace
+' Alan</code></pre>
+    <p>Arrays can hold more than just strings. You can keep test marks, genders, dates — anything with a consistent type. Use several arrays side by side, indexed the same way, to keep related information together.</p>
+    <p>When preparing for the <strong>pre-release material</strong>, follow a simple routine: read the scenario, write pseudocode and a flowchart for each task, choose test data (normal, boundary, erroneous), build trace tables, decide on your variables and arrays, and only then start coding. Half the work is done before you type a single line.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>An array is a named row of boxes, each accessed by an index.</li>
+      <li>Declare arrays with a name, a size, and a data type.</li>
+      <li>Many languages start counting at <code>0</code>; the first slot is often left unused.</li>
+      <li>Combine arrays with <code>FOR … TO … NEXT</code> loops to read or write every item.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Why is an array more useful than thirty separate variables for thirty students?</li>
+      <li>Write a loop that reads ten marks into an array and prints them in reverse order.</li>
+      <li>Why is it common to leave the first slot of an array unused?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Programming Concepts</button>
+    <button class="nav-button" data-nav="next">Databases →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13
+     ============================================================ -->
+<section id="ch-databases" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Practical Problem-Solving and Programming · Chapter 13</p>
+    <h2>Databases</h2>
+    <p class="chapter-tagline">Storing and finding information at scale.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>A <strong>database</strong> is an organised collection of data that lets people extract information when they need it. Because the data is stored once and shared, there is no duplication, no contradiction, and no endless copying. Databases hold information about people (patients, students), things (cars, books), and events (bookings, race results).</p>
+    <p>Inside a database, data lives in <strong>tables</strong>. Each table has many <strong>records</strong>, and each record has several <strong>fields</strong>. A record about a book might have fields for its title, author, and ISBN. A record about a patient might have fields for their name, date of admission, consultant, ward, and bed.</p>
+    <p>Every record needs a <strong>primary key</strong> — a field that is unique across the whole table. A book table can use its ISBN; a hospital table can invent a patient number; a doctor's appointment table can combine the date and time. The primary key is how the database finds, updates, or deletes the right record without ever confusing two.</p>
+    <pre class="code-example"><code>Query: pick out any cub scout with a birthday this month
+
+Fields shown:   Name, Date of Birth
+Criteria:       Month(Date of Birth) = Month(Now)
+
+Sample output:
+  Name          Date of Birth
+  Roy San       05-Nov-2005
+  Mia Chen      22-Nov-2009</code></pre>
+    <p>You search a database with a <strong>query</strong>. Simple criteria can be typed directly; more complex ones use query-by-example (QBE), a grid where you select the fields and enter the conditions. The database returns only the records that match.</p>
+    <p>That, in miniature, is what every app does behind the scenes. Every login, every search, every profile page is a query against a database that was designed, once, by someone who thought carefully about tables, fields, and primary keys.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A database stores data in tables; each table holds records; each record holds fields.</li>
+      <li>The primary key uniquely identifies each record.</li>
+      <li>Queries pull out only the records that match the criteria you specify.</li>
+      <li>Good database design prevents duplication and keeps data consistent.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Explain the difference between a field and a record.</li>
+      <li>What makes a good primary key? Give two examples.</li>
+      <li>Write a query to find all students in class 10B.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Data Structures: Arrays</button>
+    <button class="nav-button" data-nav="next">Glossary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section id="glossary" class="book-page chapter-page">
+  <div class="chapter-header">
+    <p class="chapter-part">Appendix</p>
+    <h2>Glossary of Useful Terms</h2>
+    <p class="chapter-tagline">A quick reference for young computer scientists.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Terms</h3>
+    <dl class="glossary-list">
+      <dt>Algorithm</dt>
+      <dd>A step-by-step way to solve a problem.</dd>
+
+      <dt>Array</dt>
+      <dd>A row of boxes that all hold the same kind of data, each with an index number.</dd>
+
+      <dt>ASCII</dt>
+      <dd>A code that gives every keyboard character a number.</dd>
+
+      <dt>Binary</dt>
+      <dd>The base-2 number system, using only 0 and 1.</dd>
+
+      <dt>Bit</dt>
+      <dd>One binary digit: 0 or 1.</dd>
+
+      <dt>Buffer</dt>
+      <dd>A temporary memory area that holds data while a slower device catches up.</dd>
+
+      <dt>Byte</dt>
+      <dd>Eight bits.</dd>
+
+      <dt>Check digit</dt>
+      <dd>An extra digit added to a code so that errors can be detected.</dd>
+
+      <dt>Compiler</dt>
+      <dd>A program that translates an entire high-level language program into machine code.</dd>
+
+      <dt>Constant</dt>
+      <dd>A named value that never changes while the program runs.</dd>
+
+      <dt>Cookie</dt>
+      <dd>A small packet of data a web server sends to a browser to track visits or store preferences.</dd>
+
+      <dt>Database</dt>
+      <dd>An organised collection of data stored in tables so it can be searched and updated.</dd>
+
+      <dt>Debugging</dt>
+      <dd>Finding and fixing errors in a program.</dd>
+
+      <dt>Denary</dt>
+      <dd>The base-10 number system we use every day.</dd>
+
+      <dt>Encryption</dt>
+      <dd>Scrambling data so that only someone with the key can read it.</dd>
+
+      <dt>Fetch–execute cycle</dt>
+      <dd>The loop in which a processor fetches, decodes, and executes one instruction at a time.</dd>
+
+      <dt>Field</dt>
+      <dd>A single piece of information in a database record.</dd>
+
+      <dt>Firewall</dt>
+      <dd>Software or hardware that filters traffic between a computer and the internet.</dd>
+
+      <dt>Flowchart</dt>
+      <dd>A diagram that shows the steps of an algorithm and the order they happen in.</dd>
+
+      <dt>Function</dt>
+      <dd>A subprogram that calculates and returns a value.</dd>
+
+      <dt>Hashing</dt>
+      <dd>Turning a message into a fixed-length string that acts as a fingerprint.</dd>
+
+      <dt>Hexadecimal</dt>
+      <dd>The base-16 number system, using digits 0–9 and letters A–F.</dd>
+
+      <dt>HTML</dt>
+      <dd>HyperText Mark-up Language — the language of web pages.</dd>
+
+      <dt>IDE</dt>
+      <dd>Integrated Development Environment — an editor, translator, and debugger in one tool.</dd>
+
+      <dt>Integer</dt>
+      <dd>A whole number, positive or negative, with no fractional part.</dd>
+
+      <dt>Interpreter</dt>
+      <dd>A program that translates and runs a high-level language program one statement at a time.</dd>
+
+      <dt>IP address</dt>
+      <dd>The unique address of a device on the internet.</dd>
+
+      <dt>Logic gate</dt>
+      <dd>A tiny circuit that takes binary inputs and produces one binary output.</dd>
+
+      <dt>Loop</dt>
+      <dd>Instructions that repeat.</dd>
+
+      <dt>MAC address</dt>
+      <dd>The unique identifier of a network interface card.</dd>
+
+      <dt>Machine code</dt>
+      <dd>The binary instructions a processor understands directly.</dd>
+
+      <dt>Parameter</dt>
+      <dd>Data passed into a subprogram.</dd>
+
+      <dt>Primary key</dt>
+      <dd>The field in a database table that uniquely identifies each record.</dd>
+
+      <dt>Procedure</dt>
+      <dd>A subprogram that performs an action but does not return a value.</dd>
+
+      <dt>Program</dt>
+      <dd>A list of instructions that tells a computer what to do.</dd>
+
+      <dt>Pseudocode</dt>
+      <dd>Plain-English-style instructions that describe what a program should do.</dd>
+
+      <dt>RAM</dt>
+      <dd>Random Access Memory — fast, volatile memory that holds data currently in use.</dd>
+
+      <dt>Record</dt>
+      <dd>One complete entry in a database table, made up of several fields.</dd>
+
+      <dt>Register</dt>
+      <dd>A high-speed storage area inside the processor.</dd>
+
+      <dt>ROM</dt>
+      <dd>Read-Only Memory — non-volatile memory that holds start-up instructions.</dd>
+
+      <dt>Sensor</dt>
+      <dd>A device that reads or measures a physical property.</dd>
+
+      <dt>String</dt>
+      <dd>Several characters treated together, such as a name or a word.</dd>
+
+      <dt>Sub-routine</dt>
+      <dd>A small program inside a bigger program that performs one job.</dd>
+
+      <dt>Syntax error</dt>
+      <dd>A mistake that breaks the rules of the language and stops translation.</dd>
+
+      <dt>Trace table</dt>
+      <dd>A table that records every change to every variable while an algorithm runs.</dd>
+
+      <dt>Truth table</dt>
+      <dd>A table listing every combination of inputs and the output of a logic gate or circuit.</dd>
+
+      <dt>Validation</dt>
+      <dd>Automatic checking that data is reasonable before it is accepted.</dd>
+
+      <dt>Variable</dt>
+      <dd>A named box that holds data and whose value can change.</dd>
+
+      <dt>Verification</dt>
+      <dd>Checking that data has been copied accurately from one place to another.</dd>
+
+      <dt>von Neumann architecture</dt>
+      <dd>The design in which programs and data share a single memory.</dd>
+    </dl>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Databases</button>
+    <button class="nav-button" data-nav="next">Back Cover →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section id="back" class="book-page cover-page back-cover">
+  <div class="cover-content">
+    <h2>The End… Or Just the Beginning?</h2>
+    <p>You have walked through the whole machine — from a single bit to a whole database.</p>
+    <p>But the best way to learn computer science is to <b>keep going</b>. Write a program. Break it. Fix it. Try again.</p>
+    <p class="closing-line">Happy computing!</p>
+    <p class="cover-note">Refactored from <em>Cambridge IGCSE Computer Science</em> by David Watson and Helen Williams, with gratitude for their careful explanations of how computers really work. All mistakes in the retelling are the adapter's own.</p>
+    <p class="cover-credit">
+      Refactored &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </p>
+  </div>
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Glossary</button>
+    <button class="nav-button" data-nav="first">↺ Begin Again</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
